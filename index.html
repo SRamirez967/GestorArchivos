@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="bg-amber-300">TITULO Y BOTONES DEL MENÚ</div>
-    <div class="flex flex-wrap space-x-6 space-y-6 justify-center">
+    <div class="flex flex-wrap space-x-6 space-y-6 justify-center" id="container">
         <div id="add_resource_btn" class="size-70 border-2 border-amber-950 border-dashed rounded-lg text-center cursor-pointer">
             <div id="image" class="h-45 flex justify-center items-center">
                 <i class="fa-solid fa-square-plus fa-2xl" style="color: rgb(97, 76, 156);"></i>
@@ -36,54 +36,6 @@
             </div>
         </div>
 
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
-            </div>
-        </div>
-
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
-            </div>
-        </div>
-
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
-            </div>
-        </div>
-
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
-            </div>
-        </div>
-
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
-            </div>
-        </div>
-
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
-            </div>
-        </div>
-        
     </div>
 
     <div id="form_add_resource" class="flex flex-col absolute top-50 left-100 bg-white p-20 space-y-12 hidden">
@@ -93,8 +45,8 @@
         </div>
         
         <div class="flex flex-col space-y-1">
-            <label for="description">Descripcion</label>
-            <input id="description" class="border-2 rounded-md">
+            <label for="desc">Descripcion</label>
+            <input id="desc" class="border-2 rounded-md">
         </div>
         
         <div class="flex flex-col space-y-1">
@@ -103,7 +55,7 @@
         </div>
         
         <div id="botones" class="justify-between">
-            <button>Add</button>
+            <button id="save_btn" class="cursor-pointer">Save</button>
             <button id="close_form" class="cursor-pointer">Cancel</button>
         </div>
     </div>
