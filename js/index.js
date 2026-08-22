@@ -52,10 +52,15 @@ function display_reosurce() {
     const new_resource = resources[0]
 
     const HTML_resource = `
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>${new_resource.name}</h1>
+        <div id="fileTemplate" class="size-70 rounded-lg shadow-xl">
+            <div id="image" class="h-45 bg-[url(/imgs/placeholderimg.jpg)] bg-no-repeat bg-cover relative">
+                <button class="text-red-700 absolute top-2 right-2 bg-amber-300">3 dots</button>
+            </div>
+            <div id="description" class="px-3 py-2">
+                <div class="flex justify-between">
+                    <h1>${new_resource.name}</h1>
+                    <button class="bg-amber-300">Open</button>
+                </div>
                 <p class="text-gray-400">${new_resource.description}</p>
             </div>
         </div>`

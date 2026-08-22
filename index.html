@@ -9,54 +9,78 @@
     <script src="https://kit.fontawesome.com/db703935de.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="bg-amber-300">TITULO Y BOTONES DEL MENÚ</div>
+    <div class="flex justify-between p-4">
+        <p>APP NAME</p>
+        <div class="flex space-x-4">
+            <button>DARK MODE ICON</button>
+            <button>USER ICON</button>
+        </div>
+    </div>
+
+    <div id="search-bar" class="flex flex-col justify-center px-100 py-20 space-y-6">
+        <p class="text-center text-4xl">SEARCH FILES</p>
+        <input class="border-2 rounded-lg">
+    </div>
+
     <div class="flex flex-wrap space-x-6 space-y-6 justify-center" id="container">
-        <div id="add_resource_btn" class="size-70 border-2 border-amber-950 border-dashed rounded-lg text-center cursor-pointer">
+        <div id="add_resource_btn" class="size-70 border-2 border-[#334195] border-dashed rounded-lg text-center cursor-pointer shadow-xl">
             <div id="image" class="h-45 flex justify-center items-center">
                 <i class="fa-solid fa-square-plus fa-2xl" style="color: rgb(97, 76, 156);"></i>
             </div>
             <div id="description">
-                <h1>AGREGAR NUEVO RECURSO</h1>
+                <h1>ADD NEW RESOURCE</h1>
             </div>
         </div>
 
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
+        <div id="fileTemplate" class="size-70 rounded-lg shadow-xl">
+            <div id="image" class="h-45 bg-[url(/imgs/placeholderimg.jpg)] bg-no-repeat bg-cover relative">
+                <button class="text-red-700 absolute top-2 right-2 bg-amber-300">3 dots</button>
+            </div>
+            <div id="description" class="px-3 py-2">
+                <div class="flex justify-between">
+                    <h1>NAME</h1>
+                    <button class="bg-amber-300">Open</button>
+                </div>
+                <p class="text-gray-400">File description</p>
             </div>
         </div>
 
-        <div id="fileTemplate" class="size-70 border-2 border-amber-950 rounded-lg">
-            <div id="image" class="border-2 border-amber-900 h-45"></div>
-            <div id="description">
-                <h1>NOMBRE</h1>
-                <p class="text-gray-400">Escribe una descripcion para tu archivo</p>
+        <div id="fileTemplate" class="size-70 rounded-lg shadow-xl">
+            <div id="image" class="h-45 bg-[url(/imgs/placeholderimg.jpg)] bg-no-repeat bg-cover relative">
+                <button class="text-red-700 absolute top-2 right-2 bg-amber-300">3 dots</button>
+            </div>
+            <div id="description" class="px-3 py-2">
+                <div class="flex justify-between">
+                    <h1>NAME</h1>
+                    <button class="bg-amber-300">Open</button>
+                </div>
+                <p class="text-gray-400">File description</p>
             </div>
         </div>
 
     </div>
 
-    <div id="form_add_resource" class="flex flex-col absolute top-50 left-100 bg-white p-20 space-y-12 hidden">
-        <div class="flex flex-col space-y-1">
-            <label for="name">Nombre</label>
-            <input id="name" class="border-2 rounded-md">
-        </div>
-        
-        <div class="flex flex-col space-y-1">
-            <label for="desc">Descripcion</label>
-            <input id="desc" class="border-2 rounded-md">
-        </div>
-        
-        <div class="flex flex-col space-y-1">
-            <label for="link">Link o Archivo</label>
-            <input id="link" class="border-2 rounded-md">
-        </div>
-        
-        <div id="botones" class="justify-between">
-            <button id="save_btn" class="cursor-pointer">Save</button>
-            <button id="close_form" class="cursor-pointer">Cancel</button>
+    <div id="form_add_resource" class="bg-gray-900/70 h-screen hidden fixed flex justify-center items-center z-50 inset-0">
+        <div class="flex flex-col absolute bg-white space-y-12 w-1/2 p-10 rounded-xl">
+            <div class="flex justify-between">
+                <label for="name">Nombre</label>
+                <input id="name" class="border-2 border-[#334195] rounded-md w-1/2">
+            </div>
+            
+            <div class="flex justify-between">
+                <label for="desc">Descripcion</label>
+                <input id="desc" class="border-2 border-[#334195] rounded-md w-1/2">
+            </div>
+            
+            <div class="flex justify-between">
+                <label for="link">Link o Archivo</label>
+                <input id="link" class="border-2 border-[#334195] rounded-md w-1/2">
+            </div>
+            
+            <div id="botones" class="flex justify-evenly">
+                <button id="save_btn" class="cursor-pointer bg-[#334195] text-white px-3 py-1 rounded-md">Save</button>
+                <button id="close_form" class="cursor-pointer bg-red-500 px-3 py-1 rounded-md">Cancel</button>
+            </div>
         </div>
     </div>
     <script src="js/index.js"></script>
